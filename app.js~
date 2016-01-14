@@ -1,7 +1,6 @@
 var scan = require('./Scan')();
 
 scan.scan();
-
 /*
 //Modules.
 var tesseract = require("node-tesseract");
