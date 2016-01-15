@@ -1,7 +1,17 @@
-var tesseract = require("node-tesseract");
+/*jslint node: true */
+'use strict';
 
-module.exports = {
-	text = "",
-	
+var tesseract = require('node-tesseract');
+var fs = require('fs');
 
+var ocr = {
+    options:
+        {
+            textPath: __dirname + 
+            
+        }
+    
 };
+
+
+

@@ -1,4 +1,12 @@
-var shell = require("child_process").exec;
+'use strict'
+
+/*
+** Modules
+*/
+var exec = require('child_process').exec;
+
+
+/*var shell = require("child_process").exec;
 
 module.exports = function(){
 	return {
@@ -11,7 +19,8 @@ module.exports = function(){
 		 getImagePathNameExtension: function(){ return this.imagesPath + this.imageName + this.imageExtension; },
 
 		 //Methods.
-	 	 scan: function(){
+	 	 scan: function( callback ) {
+	 	 try {
 	 	 	console.log("Scanning... ");
 			//Check if the Scanner Name is not unset!
 			if(this.scannerName != undefined){
@@ -22,7 +31,10 @@ module.exports = function(){
 				command += this.imageFormat;
 				command += " > ";
 				command += this.getImagePathNameExtension();
+				
+				//the this "problem"...
 				var that = this;
+				var i = 0/0;
 				//Execute the scan by sending a command to the kernel.
 				shell(command, function( error, stdout ) {
 				 
@@ -31,18 +43,24 @@ module.exports = function(){
 						console.log(error);
 						 	
 						} else {
-						
-							console.log("Scanned to: " + that.getImagePathNameExtension());
+							console.log(callback);
+							//Returns the path where the image was scaned to.
+							callback(that.getImagePathNameExtension());
 							
 							}
 						});
 				
 			}
-	}
 			
+			
+			
+	}catch(err){
+		callback(undefined, err);
+	}
+	}		
 			
 }	 
 	
 
-}
+} */
 

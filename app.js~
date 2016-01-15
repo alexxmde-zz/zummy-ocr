@@ -1,6 +1,21 @@
 var scan = require('./Scan')();
 
-scan.scan();
+var ocr = require('./OCR')();
+
+
+
+var showTextOnConsole = function(text) { 
+	console.log(text)
+ };
+
+ocr.makeOcr("");
+
+
+
+
+
+
+
 /*
 //Modules.
 var tesseract = require("node-tesseract");

@@ -1,6 +1,17 @@
-var scan = require('./Scan')();
+'use strict';
 
-scan.scan();
+var scan = require('./Scan');
+
+scan.process( function(error, imgpath) {
+    
+   console.log('scanned to: ' + imgpath); 
+    
+});
+
+
+
+
+
 
 /*
 //Modules.
