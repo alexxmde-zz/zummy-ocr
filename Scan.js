@@ -18,7 +18,7 @@ var Scan = {
         if (typeof (options) === 'function') {
             callback = options;
         }
-        
+        //Full output path of the image file to be scaned.
         var output = path.resolve(Scan.options.imagesPath + Scan.options.imageName + Scan.options.imageExtension),
             command = 'scanimage --format ' + Scan.options.imageFormat + ' > ' + output;
         
@@ -27,6 +27,7 @@ var Scan = {
                 callback(error, null);
                 return;
             }
+            
             callback(null, output);
         });
     }
