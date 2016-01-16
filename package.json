@@ -1,0 +1,19 @@
+{
+  "name": "zummy-ocr",
+  "version": "0.1.1",
+  "description": "A simple GUI for Tesseract OCR",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/thenewalex/zummy-ocr"
+  },
+    "license": "MIT",
+  "author": "thenewalex <alex.xmde@gmail.com>",
+
+ 
+ 
+  
+  "dependencies": {
+    "node-tesseract": "0.2.7"
+ 
+  }
+}
