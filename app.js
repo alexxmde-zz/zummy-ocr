@@ -3,19 +3,24 @@
 
 var scan = require('./Scan');
 var ocr = require('./OCR');
+var appjs = require('appjs');
 
-scan.process(function (err, imagePath) {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log('image extracted to: ' + imagePath);
-    ocr.process(imagePath, function (err, txtPath) {
-        if (err) {
-            console.log(err);
-            return;
-        }
-        console.log('text extracted to: ' + txtPath);
-        return;
-    });
-});
+var test = function () {
+
+        scan.process(function (err, imagePath) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            console.log('image extracted to: ' + imagePath);
+            ocr.process(imagePath, function (err, txtPath) {
+                if (err) {
+                    console.log(err);
+                    return;
+                }
+                console.log('text extracted to: ' + txtPath);
+                return;
+            });
+        });
+
+    };

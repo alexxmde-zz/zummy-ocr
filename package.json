@@ -1,7 +1,12 @@
 {
   "name": "zummy-ocr",
   "version": "0.1.1",
-  "description": "A simple GUI for Tesseract OCR",
+  "main": "main.js",
+    "scripts": {
+    "start": "electron main.js"
+  },
+    "description": "A simple GUI for Tesseract OCR",
+    
     "repository": {
     "type": "git",
     "url": "https://github.com/thenewalex/zummy-ocr"
@@ -15,5 +20,8 @@
   "dependencies": {
     "node-tesseract": "0.2.7"
  
+  },
+     "devDependencies": {
+    "electron-prebuilt": "^0.36.0"
   }
 }
